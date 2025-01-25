@@ -1,0 +1,151 @@
+/* Google Fonts (optional): Eerie styling fonts */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Roboto+Mono:wght@400&display=swap');
+
+/* Universal reset-ish */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling: swirling dark background with weird gradient animation */
+body {
+  font-family: 'Roboto Mono', monospace;
+  color: #d1d1d1;
+  background: linear-gradient(135deg, #1b1b1b, #2c002c, #0b0b39);
+  background-size: 400% 400%;
+  animation: backgroundAnimation 20s ease infinite;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Keyframes for slow background gradient movement */
+@keyframes backgroundAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-family: 'Creepster', cursive;
+  color: #ff6ad5;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #ffdee9;
+  margin-top: 0.5rem;
+}
+
+/* Main content area */
+main {
+  margin: 0 auto;
+  max-width: 800px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+/* Navigation list on homepage */
+.post-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-list li {
+  margin: 0.7rem 0;
+}
+
+.post-list a {
+  color: #ffdea6;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.post-list a:hover {
+  color: #ffffff;
+  /* A flicker effect on hover */
+  animation: flicker 0.5s infinite alternate;
+}
+
+/* Flicker keyframes */
+@keyframes flicker {
+  from { opacity: 1; }
+  to { opacity: 0.6; }
+}
+
+/* Blog post styling */
+article {
+  margin-bottom: 2rem;
+}
+
+article h2 {
+  font-family: 'Creepster', cursive;
+  margin-bottom: 1rem;
+  color: #ffdee9;
+  text-shadow: 2px 2px 4px #000;
+}
+
+article p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #e2e2e2;
+}
+
+/* Quote or excerpt style */
+blockquote {
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid #ff6ad5;
+  color: #ffc7f6;
+  font-style: italic;
+}
+
+/* Emphasize italic or strong text */
+em {
+  color: #ffade6;
+  font-style: italic;
+}
+
+strong {
+  color: #ffde6a;
+}
+
+/* Add a subtle, creepy underline to all h2, h3, etc. */
+h2, h3 {
+  border-bottom: 1px dashed #ff6ad5;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* Homepage link in blog posts and article links */
+nav a, article a {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover, article a:hover {
+  color: #7affee;
+  text-shadow: 0 0 8px rgba(0, 255, 204, 0.5);
+}
