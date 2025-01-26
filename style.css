@@ -45,13 +45,64 @@ header h1 {
   margin-top: 0.5rem;
 }
 
-/* Main content area */
-main {
+/* Main content wrapper */
+.content-wrapper {
+  max-width: 900px;
   margin: 0 auto;
-  max-width: 800px;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 20px;
+  padding: 0 20px;
+}
+
+.post-section {
+  width: 100%;
+}
+
+.post-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  justify-content: space-between;
+}
+
+.post-list {
+  flex: 0 0 400px;
+}
+
+/* Hero image styling */
+.hero-image {
+  flex: 0 0 400px;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
   border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(255, 106, 213, 0.2);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.hero-image img:hover {
+  opacity: 1;
+  box-shadow: 0 8px 25px rgba(255, 106, 213, 0.4);
+  transform: scale(1.02);
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .post-content {
+    flex-direction: column;
+  }
+  
+  .post-list, .hero-image {
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+
+  .hero-image {
+    margin: 2rem auto 0;
+  }
 }
 
 /* Footer styling */
@@ -148,4 +199,51 @@ nav a, article a {
 nav a:hover, article a:hover {
   color: #7affee;
   text-shadow: 0 0 8px rgba(0, 255, 204, 0.5);
+}
+
+/* Blog post layout */
+.article-content {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.text-content {
+  flex: 1;
+  min-width: 0; /* Prevents text from overflowing */
+}
+
+.post-image {
+  flex: 0 0 400px;
+  position: sticky;
+  top: 2rem;
+  align-self: flex-start;
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(255, 106, 213, 0.2);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.post-image img:hover {
+  opacity: 1;
+  box-shadow: 0 8px 25px rgba(255, 106, 213, 0.4);
+  transform: scale(1.02);
+}
+
+/* Responsive layout for blog posts */
+@media (max-width: 900px) {
+  .article-content {
+    flex-direction: column;
+  }
+
+  .post-image {
+    flex: 0 0 auto;
+    position: static;
+    margin: 2rem 0;
+  }
 }
